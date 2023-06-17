@@ -17,5 +17,5 @@ jobs:
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
-          name: PDF
+          name: VWA
           path: main.pdf
