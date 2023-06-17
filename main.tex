@@ -1,10 +1,14 @@
 \documentclass[12pt]{article}
-\usepackage{cite}
 \usepackage{setspace}
 \usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[
+backend=biber,
+style=apa
+]{biblatex}
+\addbibresource{sources.bib}
 \usepackage[]{amsmath}
 \onehalfspacing
-\usepackage[]{blindtext}
 \usepackage[german]{babel}
 \usepackage[a4paper, left=3.5cm, right=2.5cm]{geometry}
 \usepackage[]{subfiles}
@@ -12,9 +16,8 @@
 \author{Simon Wögerbauer}
 \begin{document}
 \subfile{title}
-\cite{key}
+test
+\cite{gupta20193d}
 testing
-\blindtext[12]
-\bibliography{sources}{}
-\bibliographystyle{plain}
+\printbibliography
 \end{document}
