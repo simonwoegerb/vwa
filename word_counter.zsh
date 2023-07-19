@@ -16,13 +16,13 @@ chars=$((chars))
 while read line; do
 if [[ $line = Word* ]] 
 then
-	echo "Word Count: $words"
+	echo -e "Word Count: $words\n"
 elif [[ $line = Char* ]]
 then 	
-	echo "Char Count: $chars"
+	echo -e "Char Count: $chars\n"
 elif [[ $line = Line* ]]
 then
-	echo "Line Count: $lines"
+	echo -e "Line Count: $lines\n"
 else
 	echo $line
 fi
