@@ -28,3 +28,9 @@ else
 fi
 done < README.md > /tmp/README.md.txt_csrae
 mv /tmp/README.md.txt_csrae README.md
+if [[ $1 = P* ]] 
+then
+	git add README.md
+	git commit -m "Updated Statistics"
+	git push
+fi
