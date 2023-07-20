@@ -4,7 +4,13 @@ Eine Arbeit im Rahmen der Fachhochschule Oberösterreich bei Ing. Walter Kaindl 
 # Statistiken
 Word Count: 896
 
+
+
 Char Count: 7298
 
+
+
 Line Count: 92
+
+
 

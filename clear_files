@@ -1,1 +1,0 @@
-rm {title,main}.{dvi,fdb_latexmk,fls,log,'run.xml',bcf,aux}
