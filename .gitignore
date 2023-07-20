@@ -1,4 +1,5 @@
 *.aux
+*.lof
 *.out
 *.fdb_latexmk
 *.fls
