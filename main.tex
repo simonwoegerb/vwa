@@ -1,31 +1,40 @@
 \documentclass[12pt]{article}
 \usepackage{setspace}
 \usepackage{siunitx}
-\usepackage{hyperref}
-\usepackage{copyrightbox}
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{csquotes}
-\usepackage{wrapfig}
 \usepackage[T1]{fontenc}
 \usepackage{float}
-\graphicspath{ {./img/} }
+\graphicspath{{./img/}}
 \usepackage[
 backend=biber,
 style=apa
 ]{biblatex}
+\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{tocloft}
+\def\hhref#1{\href{#1}{#1}}
+\def\ccaption#1#2{\caption[#1\newline#2]{#1}}
 \DeclareLanguageMapping{german}{german-apa}
 \addbibresource{sources.bib}
-\usepackage[]{amsmath}
+\usepackage{amsmath}
 \onehalfspacing
+\usepackage{blindtext}
 \usepackage[a4paper, left=3.5cm, right=2.5cm]{geometry}
-\usepackage[]{subfiles}
+\usepackage{subfiles}
 \title{Untersuchung der SLM und LMD 3D-Druckverfahren}
 \author{Simon Wögerbauer}
 \begin{document}
+\pagenumbering{Roman}
 \subfile{title}
+% Intro
+%Abstract
+\pagebreak
+\pagenumbering{arabic}
 \subfile{1}
 \subfile{2}
 \printbibliography
+\listoffigures
 \end{document}
