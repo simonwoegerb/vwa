@@ -16,13 +16,10 @@ einer Bauplatform auf, welche sich danach nach unten bewegt um eine neue Schicht
 Hinzukommt das SLM ein Pulverbett-Verfahren ist, was wiederrum bedeutet das eine neue perfekt ebene Schicht auf dem Baustück aufgetragen werden muss nach jedem Absenken der Platform.
 Hierfür ist ein Wiederbeschichtungsroller vorhanden. Nach jeder Absenkung des Druckbettes wird über die Pulverlieferungsplatte die exakt gleiche Menge an Granulat nachgeliefert, welche dann vom Wiederbeschichtungsroller eben verteilt wird am Druckbett. 
 
-Dieser Aufbau ist sehr simpel, jedoch sind eine große Menge an Variablen vorhanden, welche den Druck fehlschlagen lassen können.
-\begin{itemize}
-\item Fehlerhaftes Granulat
-\item Falsche Stärke des Lasers
-\item Falsche Schichtdicke
-\item Zu wenig Pulver
-\end{itemize}
-Dennoch ist diese Vielseitigkeit der Grund warum SLM sich so großer Beliebtheit erfreut. Mit verschiendenen Temperaturen des Lasers lassen sich viele Materialien verarbeiten, die Schichtdicke bestimmt auch direkt die Druckdauer, da dickere Schichten zu weniger benötigten Schichten führen, was die Menge an Zeit die durch den Roller verbraucht wird verringert.
+Der grundlegende Aufbau erscheint simpel, jedoch ist die Umsetzung um einiges komplexer.
+Zum einen muss der Laser optimal eingestellt sein für jedes Material, da ansonsten zu viel oder wenig geschmolzen wird.
+Auch zu bedenken ist die Reinigung die nach jedem Druck stattfinden muss, wie z.B. die Filterung des Pulvers um falsch verschmolzene Teile auszufiltern, da diese beim nächsten Druck den Roller beschädigen und den Druck verformen könnten. Dabei muss beachtet werden, dass das Pulver dennoch nicht ewig hält und nach einer gewissen Menge an Durchläufen ersetzt werden muss, da ansonsten $D_{10}$ \& $D_{90}$ sowie deren Anteil im Pulver (PSD, Particle Size Distribution) stark ansteigen. \parencite{YI2021524} Außerdem lässt sich im SLM-Verfahren auch über das Offset des Rollers zum Bett die Schichtdicke bestimmen, was die Produktionszeit stark senken kann.
+
+Dennoch ist die Vielseitigkeit der Grund warum SLM sich so groer Beliebtheit erfreut. Mit verschiendenen Temperaturen des Lasers lassen sich viele Materialien verarbeiten, die Schichtdicke bestimmt auch direkt die Druckdauer, da dickere Schichten zu weniger benötigten Schichten führen, was die Menge an Zeit die durch den Roller verbraucht wird verringert.
 Eine solche Veränderung führt aber zu detail-loseren und gröberen Teilen, welche  nach-bearbeitet werden müssen (polieren, schleifen, drehen, etc.). 
 \end{document}
