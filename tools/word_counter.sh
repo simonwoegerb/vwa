@@ -1,4 +1,4 @@
-FILES=$(find . -name \*.tex)
+FILES=$(find .. -name \*.tex)
 echo $FILES
 words=0
 lines=0
