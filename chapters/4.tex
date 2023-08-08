@@ -2,5 +2,19 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \section{Stabilität}
-Die Stabilität von SLM und LMD-Teilen hängt von vielen Faktoren ab. Bei SLM ist dies primär die Wahl des Materials, bei LMD hängt auch noch die Nachbearbeitung durch CNC-Prozesse sowie die Orientierung der Düse während des Prozesses damit zusammen. Die Wahl des Aufdruckwinkels fällt im SLM-Prozess weg, da der Laser immer den selben Querschnitt aufschmilzt aufgrund von spezialisierten linsen.
+\subsection{Orientierung}
+Im Selective-Laser-Melting-Verfahren ist die richtige Orientierung essentiell, um stabile Teile zu erhalten.
+Ein Winkel von \qty{45}{\degree} führt zu einem Teil, welcher in alle Richtungen die größtmögliche Stärke aufweisst. Dies wird in Abb. dargestellt für einen Teil welcher dem Stressprofil von Abb. folgt.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{ss_Flachstab}
+	\label{img:ss_1}
+	\ccaption{Modell mit generierten Supports}{eigener Screenshot, Lizenzhalter für Materialise Magics 25.02: FH Wels}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fh_Flachstab}
+	\label{img:fh_1}
+	\ccaption{Lastenprofil für ein Teil}{Screenshot Studentenaufgabe FH Wels: Ing. Walter Kaindl}
+\end{figure}
 \end{document}
