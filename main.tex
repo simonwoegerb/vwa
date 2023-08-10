@@ -7,6 +7,7 @@
 \usepackage{csquotes}
 \usepackage[T1]{fontenc}
 \usepackage{float}
+\usepackage{blindtext}
 \graphicspath{{./img/}}
 \usepackage[
 backend=biber,
@@ -29,8 +30,9 @@ style=apa
 \begin{document}
 \pagenumbering{Roman}
 \subfile{title}
-% Intro
-%Abstract
+\subfile{abstract}
+\pagebreak
+\subfile{intro}
 \pagebreak
 \pagenumbering{arabic}
 \tableofcontents
