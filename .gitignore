@@ -1,4 +1,5 @@
 *.aux
+*(busy)
 *.toc
 *.lof
 *.out
