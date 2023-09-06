@@ -3,10 +3,16 @@
 \begin{document}
 \section{Einführung in das Feld des 3D-Druck}
 \subsection{Historisches}
-Der 3D-Druck, auch bekannt als Additive Manufacturing (AM) oder Rapid Prototyping ist ein bereits lange bekanntes Forschungsfeld, da bereits im Jahr 1986 das erste Verfahren, SLA (Stereolithographie), von Charles Hull entwickelt wurde. Jedoch basierten diese frühen Methoden allesamt auf der Verarbeitung von Polymeren in diversen Formen, zum Beispiel bediente sich SLA einem UV-reaktiven Kunstharz. Das wohl bekannteste Verfahren ist FDM (Filament-Deposition-Modelling), welches im Gegensatz zu SLA mit Spulen an Filament (meist $D=\qty{1.75}{mm}$) arbeitet. Dieses Filament besteht aus thermoplastischen Polymeren, das heißt der Polymer kann aufgeschmolzen werden und wird daraufhin durch eine Düse aufgetragen. Dieser Vorgang ist im Konstrast zu SLA reversibel, da ein Thermoplast immer wieder aufgeschmolzen werden kann.\parencite{BHATIA20231060} Das Kunstharz jedoch wird wenn der Photopolymer ausreagiert hat nie wieder in seinen urspünglichen Zustand zurückführbar sein.\parencite{FACUNDO_1}
+Der 3D-Druck, auch bekannt als Additive Manufacturing (AM) oder Rapid Prototyping ist ein bereits lange bekanntes Forschungsfeld, da bereits im Jahr 1986 das erste Verfahren, SLA (Stereolithographie), von Charles Hull entwickelt wurde. 
+Jedoch basierten diese frühen Methoden allesamt auf der Verarbeitung von Polymeren in diversen Formen, zum Beispiel bediente sich SLA einem UV-reaktiven Kunstharz. 
+Das wohl bekannteste Verfahren ist FDM (Filament-Deposition-Modelling), welches im Gegensatz zu SLA mit Spulen an Filament (meist $D=\qty{1.75}{mm}$) arbeitet. 
+Dieses Filament besteht aus verschiedenen thermoplastischen Polymeren. Das heißt der Polymer kann aufgeschmolzen werden und wird daraufhin durch eine Düse aufgetragen.
+%Dieser Vorgang ist im Konstrast zu SLA reversibel, da ein Thermoplast immer wieder aufgeschmolzen werden kann.\parencite{BHATIA20231060} Das Kunstharz jedoch wird wenn der Photopolymer ausreagiert hat nie wieder in seinen urspünglichen Zustand zurückführbar sein.\parencite{FACUNDO_1}
+
 \subsection{Entwicklungen im Metall-Bereich}
-Metall-3D-Druck ist in jeder Hinsicht komplexer, da für die Materialverarbeitung von den genutzten Materialien sehr hohe Temperaturen benötigt werden, z.B. für den Edelstahl 316L zwischen \qty{1390}{\celsius} und \qty{1440}{\degreeCelsius} \parencite{610LSTEEL}. Zudem ist auch die Handhabung des Materials kompliziert, da primär ein Pulver mit einem durchschnittlichen Durchmesser von $D_{50}=\SI{30}{\micro\meter}$\parencite[~S.3]{ZAKRZEWSKI2020115}, daher müssen die Druckkammern hermetisch versiegelt sein bei Pulverbett-basierenden Verfahren.
-Anders dabei sind Schweißraupen-basierte Maschinen, da bei diesen das Pulver nicht frei zugänglich ist, weil das Material durch die Düse aufgeschmolzen wird und nie im rohen Zustand in die Druckkammer kommt.
+Metall-3D-Druck ist in jeder Hinsicht komplexer, da für die Materialverarbeitung von den genutzten Materialien sehr hohe Temperaturen benötigt werden, z.B. für den Edelstahl 316L zwischen \qty{1390}{\celsius} und \qty{1440}{\degreeCelsius} \parencite{610LSTEEL}. Zudem ist auch die Handhabung des Materials kompliziert, da primär ein Pulver mit einem durchschnittlichen Durchmesser von $D_{50}=\SI{30}{\micro\meter}$\parencite[~S.3]{ZAKRZEWSKI2020115} verwendet wird. 
+Daher müssen die Druckkammern hermetisch versiegelt sein bei sogenannten Pulverbett-basierenden Verfahren in welchen das Material frei zugänglich ist in großen Mengen.
+Anders dabei sind Schweißraupen-basierende Maschinen, da bei diesen das Pulver nicht frei zugänglich ist, da das Material durch eine Düse ausgestrahlt und aufgeschmolzen wird und nie im rohen Zustand in die Druckkammer kommt.
 
 \subsection{Grundlagen des modernen 3D-Druck}
 \begin{figure}[h]
@@ -17,12 +23,14 @@ Anders dabei sind Schweißraupen-basierte Maschinen, da bei diesen das Pulver ni
 \end{center}
 \end{figure}	
 
-Die Grundlage eines jeden 3D-gedruckten Modells ist immer ein Computer-Assisted-Design-Modell (CAD), welches das gewünschte Teil durch 2D-Zeichnungen darstellt, welche danach zu Körpern extrudiert werden mit verschiedenen Tools. Diese Modelle werden nun in Standard-Tesselation-Language-Datei (STL) konvertiert, um sie für den Slicer, ein Programm, dass das Modell für den Drucker konvertiert, verständlich ist. Eine STL-Datei stellt das Modell als eine Punktwolke dar, wobei immer 3 Punkte ein Dreieck bilden. Ein weiterer gespeichterter Aspekt ist die Normalrichtung eines jeden Dreiecks, damit der Slicer damit berechnen kann, welche Seite die Äußere ist. 
+Die Grundlage eines jeden 3D-gedruckten Modells ist meist ein Computer-Assisted-Design-Modell (CAD), welches das gewünschte Teil durch 2D-Zeichnungen darstellt, welche danach zu Körpern extrudiert werden mit verschiedenen Tools. Diese Modelle werden  in Standard-Tesselation-Language-Datei (STL) konvertiert. Dieses Format ist für den Slicer, ein Programm, welches das Modell für den Drucker konvertiert, verständlich. Eine STL-Datei stellt das Modell als eine Punktwolke dar, wobei immer 3 Punkte ein Dreieck ("Facet") bilden. Ein weiterer Aspekt, welcher von STL-Dateien gespeichert wird ist der Normalvektor eines jeden Dreiecks, mit welchem der Slicer berechnen kann, ob es eine "innere" oder "äußere"
+Facet ist.
 
-Dieses grundlegende Konzept ist sehr effizient darin, ebene Oberflächen darzustellen wie Rechtecke, da diese nur aus 2 Dreiecken bestehen. Wenn eine Krümmung einzurechnen ist, muss wie in Abb. \ref{img:stl_1} zu erkennen ist diese Krümmung mit Dreiecken annähernd dargestellt werden. Dieser Vorgang führt immer eine Ungenauigkeit ein. Diese Problematik kann durch höhere Auflösung des Modells reduziert werden, da die meisten CAD-Suites einen Approximationsgrad angeben lassen, aber als Konsequenz sind die resultierende enorme Dateigröße sowie auch der stark ansteigende Rechenaufwand zu beachten. \parencite{ADOBLESTL} 
+
+Dieses grundlegende Konzept ist sehr effizient darin, ebene Oberflächen darzustellen wie Rechtecke, da diese nur aus 2 Dreiecken bestehen. Wenn eine Krümmung einzurechnen ist, muss wie in Abb. \ref{img:stl_1} zu erkennen ist, diese Krümmung mit Dreiecken angenähert werden. Dieser Vorgang führt eine Ungenauigkeit ein. Diese Problematik kann durch höhere Auflösung des Modells reduziert werden, da die meisten CAD-Suites einen Approximationsgrad angeben lassen (zumeist \qty{1}{\milli\meter}. Als Konsequenz sind die resultierende Dateigröße, welche sich bei schlechter Optimierung schon bei \qty{2}{\milli\meter} großen Teilen auf \qty{500}{\mega\byte} belaufen kann, sowie auch der stark ansteigende Rechenaufwand zu beachten. \parencite{ADOBLESTL} 
 
 Als Alternative zum STL-Format steht das STEP-Format, welches Krümmungen mit sogenannten Non-Uniform Rational B-Splines (NURBS) darstellt.
-Diese ermöglichen es, beliebige Kurven und Formen darzustellen. Das Format wird immer beliebter, wobei es noch weit  vom Nutzungsgrad der STL-Dateien entfernt ist. \parencite{ADOBESTEP}
+Diese ermöglichen es, beliebige Kurven und Formen darzustellen. Das Format wird immer beliebter, wobei es noch weit vom Nutzungsgrad der STL-Dateien entfernt ist. \parencite{ADOBESTEP}
 
 
 \end{document}
