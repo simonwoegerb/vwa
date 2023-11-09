@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{csquotes}
+\usepackage[acronym]{glossaries}
 \usepackage[T1]{fontenc}
 \usepackage{float}
 \usepackage{blindtext}
@@ -16,9 +17,16 @@ style=apa
 ]{biblatex}
 \usepackage{hyperref}
 \usepackage{xurl}
+\usepackage[
+    left = \glqq{},% 
+    right = \grqq{},% 
+    leftsub = \glq{},% 
+    rightsub = \grq{} %
+]{dirtytalk}
 \usepackage{tocloft}
 \def\hhref#1{\href{#1}{#1}}
 \def\ccaption#1#2{\caption[#1\newline#2]{#1}}
+\def\it#1{\textit{#1}}
 \DeclareLanguageMapping{german}{german-apa}
 \addbibresource{sources.bib}
 \usepackage{amsmath}
@@ -28,12 +36,13 @@ style=apa
 \usepackage{subfiles}
 \title{Untersuchung der SLM und LMD 3D-Druckverfahren}
 \author{Simon Wögerbauer}
+\input{glossary}
 \begin{document}
 \pagenumbering{Roman}
 \subfile{title}
 %\subfile{abstract}
 \pagebreak
-%\subfile{intro}
+%%\subfile{intro}
 \pagebreak
 \pagenumbering{arabic}
 \tableofcontents
@@ -41,9 +50,29 @@ style=apa
 \subfile{chapters/1}
 \subfile{chapters/2}
 \subfile{chapters/3}
-%\subfile{chapters/4}
+\section{Kapazitäten und Grenzen der Maschinen}
+\subsection{Geschwindigkeit}
+\subsection{Recycling des Exzess-Materials}
+\subsection{Druckbare Geometrien (Überhänge)}
+\section{Materialien und Eigenschaften}
+%Dennoch ist die Vielseitigkeit der Grund warum SLM sich so großer Beliebtheit erfreut. Mit verschiendenen Temperaturen des Lasers lassen sich viele Materialien verarbeiten, wie Fe-C-Stähle mit einem C-Gehalt von maximal \qty{0.3}{\percent}wt, Titan und Aluminium.
+\subsection{Einführung Werkstofftechnik/Materialien}
+\subsection{Physikalische Eigenschaften}
+\subsection{Orientierung und deren Auswirkung auf die Stabilität}
+\section{Anwendungen in Forschung und Industrie}
+\subsection{Forschung}
+\subsection{Industrie}
+\subsubsection{Reperatur}
+%Dies ist besonders praktisch für Firmen, welche auf alte Maschinen angewiesen sind, deren Ersatzteile schon längst außer Produktion sind. Die Anschaffungskosten eines Metall-3D-gedruckten Werkstückes sind zwar enorm hoch, aber dennoch günstiger in vielen Fällen als das Produkt substraktiv herzustellen.
+\subsubsection{Leichtbauindustrie}
+\subfile{chapters/4}
+\pagebreak
+\pagebreak
+%\printnoidxglossary
+\printnoidxglossary[type=\acronymtype]
 \pagebreak
 \printbibliography
 \pagebreak
 \listoffigures
+
 \end{document}
