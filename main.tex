@@ -15,8 +15,8 @@ backend=biber,
 %style=ieee
 style=apa
 ]{biblatex}
-\usepackage{hyperref}
 \usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
 \usepackage[
     left = \glqq{},% 
     right = \grqq{},% 
@@ -58,18 +58,17 @@ style=apa
 %Dennoch ist die Vielseitigkeit der Grund warum SLM sich so großer Beliebtheit erfreut. Mit verschiendenen Temperaturen des Lasers lassen sich viele Materialien verarbeiten, wie Fe-C-Stähle mit einem C-Gehalt von maximal \qty{0.3}{\percent}wt, Titan und Aluminium.
 \subsection{Einführung Werkstofftechnik/Materialien}
 \subsection{Physikalische Eigenschaften}
-\subsection{Orientierung und deren Auswirkung auf die Stabilität}
+\subfile{chapters/4}
 \section{Anwendungen in Forschung und Industrie}
 \subsection{Forschung}
 \subsection{Industrie}
 \subsubsection{Reperatur}
 %Dies ist besonders praktisch für Firmen, welche auf alte Maschinen angewiesen sind, deren Ersatzteile schon längst außer Produktion sind. Die Anschaffungskosten eines Metall-3D-gedruckten Werkstückes sind zwar enorm hoch, aber dennoch günstiger in vielen Fällen als das Produkt substraktiv herzustellen.
 \subsubsection{Leichtbauindustrie}
-\subfile{chapters/4}
 \pagebreak
 \pagebreak
-%\printnoidxglossary
 \printnoidxglossary[type=\acronymtype]
+\printnoidxglossary
 \pagebreak
 \printbibliography
 \pagebreak
