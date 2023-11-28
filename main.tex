@@ -37,7 +37,18 @@ style=apa
 \title{Untersuchung der SLM und LMD 3D-Druckverfahren}
 \author{Simon Wögerbauer}
 \input{glossary}
+
+\defbibfilter{web}{
+  type=online
+}
+\defbibfilter{def}{
+  not type=online 
+}
+\nocite{*}
+\usepackage{fancyhdr}   
 \begin{document}
+
+
 \pagenumbering{Roman}
 \subfile{title}
 %\subfile{abstract}
@@ -67,10 +78,12 @@ style=apa
 \subsubsection{Leichtbauindustrie}
 \pagebreak
 \pagebreak
-\printnoidxglossary[type=\acronymtype]
-\printnoidxglossary
+\printnoidxglossary[sort=use, type=\acronymtype]
+\printnoidxglossary[sort=use]
 \pagebreak
-\printbibliography
+\printbibliography[filter=def]
+\pagebreak
+\printbibliography[title={Web-Quellen}, filter=web]
 \pagebreak
 \listoffigures
 

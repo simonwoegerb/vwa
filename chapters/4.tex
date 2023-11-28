@@ -1,7 +1,7 @@
 %! TEX root = ../main.tex
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\section{Auswirkungen von Orientierung und Platzierung}
+\subsection{Auswirkungen von Orientierung und Platzierung}
 Im Selective-Laser-Melting-Verfahren ist die richtige Orientierung im Slicer essentiell, um stabile Teile zu erhalten.
 Ein Winkel von \qty{45}{\degree} führt zu einem Teil, welcher in alle Richtungen die universell größtmögliche Stärke aufweisst. Dies wird in Abb. \ref{img:ss_1} für einen Teil welcher dem Stressprofil von Abb. \ref{img:fh_1} folgt dargestellt. 
 \begin{figure}[H]
@@ -30,22 +30,28 @@ Zusätzlich ist die Orientierung auch bei der Platzierung der Supportstrukturen 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{unsupported}
-	\ccaption{Geschwindigkeitsoptimierter Druck}{Eigener Screenshot PrusaSlicer 2.6.0}
+	\ccaption{Geschwindigkeitsoptimierter Druck}{Eigener Screenshot \Gls{prusaslicer} 2.6.0}
 	\label{img:unsupp_1}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{supported}
-	\ccaption{Massenproduktionsoptimierter Druck}{Eigener Screenshot PrusaSlicer 2.6.0}
+	\ccaption{Massenproduktionsoptimierter Druck}{Eigener Screenshot \Gls{prusaslicer} 2.6.0}
 	\label{img:supp_1}
 \end{figure}
 In der Massenproduktion wird zusätzlich dazu auch noch versucht, den Teil so hoch wie nur möglich zu orientieren, um den Platzverbrauch auf der Bauplatte zu minimieren wie in Abb. \ref{img:unsupp_1} und Abb. \ref{img:supp_1} zu erkennen ist. Durch diese Optimierung konnte die Produktionszahl in einem Druckvorgang beinahe verdoppelt werden.  zu erkennen ist. Durch diese Optimierung konnte die Produktionszahl in einem Druckvorgang beinahe verdoppelt werden.  zu erkennen ist. Durch diese Optimierung konnte die Produktionszahl in einem Druckvorgang beinahe verdoppelt werden.  zu erkennen ist. Durch diese Optimierung konnte die Produktionszahl in einem Druckvorgang beinahe verdoppelt werden. Der dabei entstehende Zeitaufwand durch das Drucken der Supportstrukturen ist dabei kein Nachteil, da diese Prozesse unbeaufsichtigt über Nacht laufen können und so die höhere Stückzahl am nächsten Arbeitstag dennoch fertig ist.
 
-Bei \acrfull{lmd} kommt hierzu noch der Fakt, dass die die Maschine zumeist nicht darauf angewiesen ist Schicht für Schicht aufzubauen, sondern es auch möglich ist damit von der Seite Objekt aufzutragen wie in Abb. \ref{img:t_pipe} erkennbar ist. Dort wird wie üblich der gelbe Teil von unten nach oben schichtweise gedruckt, und für den roten Teil rotiert der Druck-Kopf um \qty{90}{\percent}, um damit die Supportstrukturen einzusparen. 
+Bei \acrfull{lmd} kommt hierzu noch der Fakt, dass die die Maschine zumeist nicht darauf angewiesen ist Schicht für Schicht aufzubauen, sondern es auch möglich ist damit von der Seite Objekt aufzutragen wie in Abb. \ref{img:t_pipe} erkennbar ist. Dort wird wie üblich der gelbe Teil von unten nach oben schichtweise gedruckt, und für den roten Teil rotiert der Druck-Kopf um \qty{90}{\degree}, um damit die Supportstrukturen einzusparen. Zudem ist es im \acrshort{lmd} auch möglich, dadurch ein Teil für verschiendene Last-Profile gleichzeitig zu optimieren und schönere Oberflächen zu erhalten ohne Nachbearbeitung wie in Abb. \ref{img:orient_1} erkenntlich ist. Wenn die runde Oberfläche parallel zur Bauplatte ist werden dort die Schichtlinien sehr stark und auffällig. Steht sie jedoch normal dazu sind nur gleichmäßige Schichtlinien normal zur Oberfläche erkennbar, welche schneller entfernt sind und akkuratere Dimensionen einhalten können.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{round_orientation}
+	\ccaption{Auswirkung von Orientierung auf runde Oberflächen}{https://www.3dprintingsolutions.com.au/Portals/1/EasyGalleryImages/1/1169/HowToPrint-Model-Orientation-Quality-Circle-Layers.jpg}
+	\label{img:round_orient}
+\end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{t_pipe}
-	\ccaption{T-Rohr als LMD-sliced Teil}{Eigener Screenshot PrusaSlicer 2.6.0}
+	\ccaption{T-Rohr als LMD-druckbarer Teil}{Eigener Screenshot \Gls{prusaslicer} 2.6.0}
 	\label{img:t_pipe}
 \end{figure}
 \end{document}
