@@ -10,10 +10,14 @@
 \usepackage{float}
 \usepackage{blindtext}
 \graphicspath{{./img/}}
+\hfuzz=5.0002pt
+\voffset = 1cm
+\setlength{\headheight}{110pt}
 \usepackage[
+defernumbers=true,
 backend=biber,
-%style=ieee
-style=apa
+style=ieee
+%style=apa
 ]{biblatex}
 \usepackage{xurl}
 \usepackage[hidelinks]{hyperref}
@@ -27,28 +31,34 @@ style=apa
 \def\hhref#1{\href{#1}{#1}}
 \def\ccaption#1#2{\caption[#1\newline#2]{#1}}
 \def\it#1{\textit{#1}}
-\DeclareLanguageMapping{german}{german-apa}
-\addbibresource{sources.bib}
+%\DeclareLanguageMapping{german}{german-apa}
+\addbibresource{articles.bib}
+\addbibresource{web.bib}
+\BiblatexSplitbibDefernumbersWarningOff
 \usepackage{amsmath}
 \onehalfspacing
 \usepackage{blindtext}
 \usepackage[a4paper, left=3.5cm, right=2.5cm]{geometry}
 \usepackage{subfiles}
-\title{Untersuchung der SLM und LMD 3D-Druckverfahren}
-\author{Simon Wögerbauer}
 \input{glossary}
-
 \defbibfilter{web}{
   type=online
 }
 \defbibfilter{def}{
   not type=online 
 }
-\nocite{*}
+\renewbibmacro*{date}{%
+  \iffieldundef{year}
+    {\bibstring{nodate}}
+    {\printdate}
+}
 \usepackage{fancyhdr}   
+\renewbibmacro*{date}{%
+	  \iffieldundef{year}
+	      {\bibstring{nodate}}
+	          {\printdate}}
+
 \begin{document}
-
-
 \pagenumbering{Roman}
 \subfile{title}
 %\subfile{abstract}
@@ -59,8 +69,8 @@ style=apa
 \tableofcontents
 \pagebreak
 \subfile{chapters/1}
-\subfile{chapters/2}
-\subfile{chapters/3}
+%\subfile{chapters/2}
+%\subfile{chapters/3}
 \section{Kapazitäten und Grenzen der Maschinen}
 \subsection{Geschwindigkeit}
 \subsection{Recycling des Exzess-Materials}
@@ -69,7 +79,7 @@ style=apa
 %Dennoch ist die Vielseitigkeit der Grund warum SLM sich so großer Beliebtheit erfreut. Mit verschiendenen Temperaturen des Lasers lassen sich viele Materialien verarbeiten, wie Fe-C-Stähle mit einem C-Gehalt von maximal \qty{0.3}{\percent}wt, Titan und Aluminium.
 \subsection{Einführung Werkstofftechnik/Materialien}
 \subsection{Physikalische Eigenschaften}
-\subfile{chapters/4}
+%\subfile{chapters/4}
 \section{Anwendungen in Forschung und Industrie}
 \subsection{Forschung}
 \subsection{Industrie}
@@ -78,13 +88,17 @@ style=apa
 \subsubsection{Leichtbauindustrie}
 \pagebreak
 \pagebreak
+
 \printnoidxglossary[sort=use, type=\acronymtype]
 \printnoidxglossary[sort=use]
+
 \pagebreak
 \printbibliography[filter=def]
+
 \pagebreak
+\newrefcontext[sorting=none,labelprefix={Web\space}]
 \printbibliography[title={Web-Quellen}, filter=web]
+
 \pagebreak
 \listoffigures
-
 \end{document}
