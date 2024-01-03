@@ -1,3 +1,5 @@
+*.glo
+*.ist
 *.aux
 *(busy)
 *.toc
