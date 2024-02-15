@@ -17,8 +17,9 @@ Wie aus Abb. \ref{img:search_5} erkennbar ist, ist die Nachfrage und Forschung f
 	\label{img:am_shares}
 \end{figure} 
 \subsection{Forschung}
+Der Metall-3D-Druck erfreut sich in Forschungs- und Entwicklungs-Anwendungen sehr großer Beliebtheit, da durch solche Technologien eine schnelle \say{Iterationszeit}, also Zeit zwischen der Produktion von Designs und Ideen, ermöglicht wird. Zudem kann viel Material im Vergleich zu substraktiver Produktion eingespart werden. Es ist nicht mehr nötig an die Umsetzbarkeit durch Fräßen, Bohren und Drehen zu denken, da mit einem Metall-3D-Drucker viel weniger Limitierungen existieren (es können vollständig verdeckteKühlkanäle durch einen Teil gelegt werden, welche mit konventionellen Methoden unmöglich wären).
 \subsubsection{Medizinische Implantate}
-In der Medizin wird 3D-Druck hauptsächlich im Kontext der Erschaffung von Knochen-Implantaten erforscht. Mithilfe eines Computer-Tomographie-Scans wird ein Abbild des Knochens digital erschaffen, welches von einem \acrshort{am}-Ingenieur nachbearbeitet und aufbereitet wird wie in \ref{img:medical} erkennbar ist. Viele Aspekte dieser Aufbereitung werden mit Computer-gestützten Algorithmen durchgeführt, um sie an die Form des Knochens anzupassen.
+In der Medizin wird 3D-Druck hauptsächlich im Kontext der Erschaffung von Knochen-Implantaten erforscht. Mithilfe eines Computer-Tomographie-Scans wird ein Abbild des Knochens digital erschaffen, welches von einem \acrshort{am}-Ingenieur nachbearbeitet und aufbereitet wird wie in \ref{img:medical} erkennbar ist. Viele Aspekte dieser Aufbereitung werden mit Computer-gestützten Algorithmen durchgeführt, um sie an die Form des Knochens anzupassen.\parencite{doi:10.1146/annurev-bioeng-082020-032402}
 
 \begin{figure}[H]
 	\centering
@@ -28,7 +29,7 @@ In der Medizin wird 3D-Druck hauptsächlich im Kontext der Erschaffung von Knoch
 \end{figure} 
 Zudem sind die Implantate zu meist mit verschiedenen \it{Lattice}-Strukturen ausgefüllt und anderen Methoden der Gewicht-Verringerung optimiert worden, um Material zu sparen und dem Körper mehr Oberfläche zu geben, um sich damit zu verbinden. Hauptsächlich werden als Material Titan-Legierungen verwendet, wie z.B. Ti-6Al-4V, da diese gut verträglich für den Körper sind, korrosionsresistent sind und leichter sind als die meisten Stähle.
 ($\rho_{Titan} = \qty{4.2}{\gram\per\centi\meter\cubed}, \rho_{Stahl} = \qty{8.05}{\gram\per\cm\cubed}$). \parencite{steel12709, titanium6al4v}
-Da diese Implantate sehr präzise Spezifikationen einzuhalten haben, wird hier ausschließlich der \acrlong{slm} Prozess verwendet.
+Da diese Implantate sehr präzise Spezifikationen einzuhalten haben, wird hier ausschließlich der \acrlong{slm} Prozess verwendet, da \acrshort{lmd} zu inkonsistent ist in diesem Maßstab. Dennoch ist eine Nachbearbeitung und Anpassung vor und während der Operation fast immer nötig um den perfekten Sitz des Knochenersatzes zu garantieren.\parencite{doi:10.1146/annurev-bioeng-082020-032402}
 
 Für Last-tragende Knochen müssen die Implantate wärmebehandelt werden, um die gewünschte Stabilität und Flexibilität zu erreichen, welche ein Brechen des Implantates nach der Einsetzung verhindern soll.
 
@@ -47,6 +48,14 @@ Bei dem obigen Beispiel wird der Teil komplett neu produziert.
 Eine für viele Industrien realistischere Option ist die Reparatur eines beschädigten Teils. Für eine komplette Reproduktion wäre ein \acrshort{cad}-Modell nötig, um die nötige Präzision zu erhalten. 
 Bei einer teilweisen Rekonstruktion kann mithilfe von speziellen Messgeräten und Scannern die Impräzision des \acrshort{lmd}-Prozesses minimiert werden und im Nachhinein noch mit Substratktiven Verfahren wie \acrfull{cnc} oder Drehen auf die genaue Spezifikation angepasst werden. 
 \subsubsection{Leichtbauindustrie}
+Die Leichtbau-Industrie, inbesonders im Bereich der Luftfahrt, profitiert immens von den Möglichkeiten, die durch \acrfull{am} ermöglicht werden. Durch \acrfull{slm} sind präzise Teile (Brennstoff-Einspeisung o.Ä., siehe Abb. \ref{img:aero_1} (b, c, d)) möglich, welche ein kleineres Volumen beanspruchen, wobei \acrfull{lmd} für große Bauteile (das gesamte Triebwerksgehäuse, siehe Abb. \ref{img:aero_1}(f)) viele Vorteile mit sich bringt. Im Rahmen dieser additiven Prozesse sind auch die bereits erwähnten Kühlkanäle, wie sie in Abb. \ref{img:aero_1} (d) deutlich zu erkennen sind noch einmal hervorzuheben, da damit bisher unmögliche Entwürfe, welche 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.8\textwidth]{aero_2}
+	\ccaption{Beispiele verscheidener Bauteile, welche mit \acrshort{am} produziert wurden}{\url{https://www.researchgate.net/profile/Paul-Gradl/publication/360032150/figure/fig4/AS:1146451094708236@1650346649497/Examples-of-complex-aerospace-parts-fabricated-with-different-metals-and-alloys-a.png}}
+	\label{img:aero_1}
+\end{figure} 
 
 \subsubsection{Automobil-Industrie}
 

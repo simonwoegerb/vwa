@@ -4,7 +4,7 @@
 Eine Arbeit ermöglicht durch die Fachhochschule Oberösterreich, Campus Wels, bei Ing. Walter Kaindl und Ing. Günther Laimer im Rahmen eines Praktikums ermöglicht durch FH-Prof. Dipl.-Ing. Dr.tech. Daniel Heim und Manuel Schachinger BSc.
 
 # Statistiken
-Word Count: 4033
-Char Count: 33993
-Line Count: 369
+Word Count: 4723
+Char Count: 39707
+Line Count: 399
 
