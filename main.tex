@@ -5,7 +5,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{csquotes}
-\usepackage[acronym]{glossaries}
+\usepackage{tocbibind}
+\usepackage[acronym, toc]{glossaries}
 \usepackage[T1]{fontenc}
 \usepackage{float}
 \usepackage[version=4]{mhchem}
@@ -63,14 +64,18 @@ style=ieee
   presentedat = präsentiert auf\addspace,
 }
 \begin{document}
-\pagenumbering{Roman}
+\pagenumbering{gobble}
 \subfile{title}
-%\subfile{abstract}
+\pagenumbering{Roman}
+
+\subfile{abstract}
 \pagebreak
-%%\subfile{intro}
+\subfile{vorwort}
+
 \pagebreak
 \pagenumbering{arabic}
 \tableofcontents
+\subfile{einleitung}
 \pagebreak
 \subfile{chapters/1}
 \subfile{chapters/2}
@@ -86,12 +91,12 @@ style=ieee
 \pagebreak
 
 \pagebreak
-\printbibliography[filter=def]
+\printbibliography[filter=def, heading=bibintoc]
 
 
 \pagebreak
 \newrefcontext[sorting=none,labelprefix={Web\space}]
-\printbibliography[title={Web-Quellen}, filter=web]
+\printbibliography[heading=bibintoc, title={Web-Quellen}, filter=web]
 
 \pagebreak
 \listoffigures
