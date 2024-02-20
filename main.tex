@@ -21,6 +21,7 @@ backend=biber,
 style=ieee
 %style=apa
 ]{biblatex}
+%\DeclareLanguageMapping{german}{german-apa} % Wenn APA gewünscht
 \usepackage{xurl}
 \usepackage[hidelinks]{hyperref}
 \usepackage[
@@ -30,32 +31,25 @@ style=ieee
     rightsub = \grq{} %
 ]{dirtytalk}
 \usepackage{tocloft}
+\renewcommand{\glstextformat}[1]{\textit{#1}}
+\renewcommand{\it}[1]{\textit{#1}}
 \def\hhref#1{\href{#1}{#1}}
 \def\ccaption#1#2{\caption[#1\newline#2]{#1}}
-\def\it#1{\textit{#1}}
-%\DeclareLanguageMapping{german}{german-apa}
 \addbibresource{articles.bib}
 \addbibresource{web.bib}
 \BiblatexSplitbibDefernumbersWarningOff
 \usepackage{amsmath}
-\onehalfspacing
 \usepackage{blindtext}
 \usepackage[a4paper, left=3.5cm, right=2.5cm]{geometry}
 \usepackage{subfiles}
 \input{glossary}
-\defbibfilter{web}{
-  type=online
-}
-\defbibfilter{def}{
-  not type=online 
-}
 \renewbibmacro*{date}{%
   \iffieldundef{year}
     {\bibstring{nodate}}
     {\printdate}
 }
 \usepackage{fancyhdr}   
-\renewbibmacro*{date}{%
+\renewbibmacro*{date}{
 	  \iffieldundef{year}
 	      {\bibstring{nodate}}
 	          {\printdate}}
@@ -63,7 +57,9 @@ style=ieee
 \DefineBibliographyStrings{german}{
   presentedat = präsentiert auf\addspace,
 }
+\addto{\captionsgerman}{\renewcommand{\abstractname}{Abstract}}
 \begin{document}
+\onehalfspacing
 \pagenumbering{gobble}
 \subfile{title}
 \pagenumbering{Roman}
@@ -74,30 +70,23 @@ style=ieee
 
 \pagebreak
 \pagenumbering{arabic}
+\singlespacing
 \tableofcontents
+\onehalfspacing
+\pagebreak
 \subfile{einleitung}
 \pagebreak
-\subfile{chapters/1}
-\subfile{chapters/2}
-\subfile{chapters/3}
-\section{Kapazitäten und Grenzen der Maschinen}
-\subsection{Verwendbare Materialien}
-\subsection{Geschwindigkeit}
-\subsection{Recycling des Exzess-Materials}
-\subsection{Druckbare Geometrien (Überhänge)}
-%Dennoch ist die Vielseitigkeit der Grund warum SLM sich so großer Beliebtheit erfreut. Mit verschiendenen Temperaturen des Lasers lassen sich viele Materialien verarbeiten, wie Fe-C-Stähle mit einem C-Gehalt von maximal \qty{0.3}{\percent}wt, Titan und Aluminium.
-\subfile{chapters/4}
-\subfile{chapters/5}
+\subfile{chapters/einfuehrung}
+\subfile{chapters/slm}
+\subfile{chapters/lmd}
+\subfile{chapters/kapazitaeten}
+\subfile{chapters/anwendungen}
 \pagebreak
-
-\pagebreak
-\printbibliography[filter=def, heading=bibintoc]
-
-
+\singlespacing
+\printbibliography[nottype=online, heading=bibintoc]
 \pagebreak
 \newrefcontext[sorting=none,labelprefix={Web\space}]
-\printbibliography[heading=bibintoc, title={Web-Quellen}, filter=web]
-
+\printbibliography[heading=bibintoc, title={Web-Quellen}, type=online]
 \pagebreak
 \listoffigures
 \pagebreak
