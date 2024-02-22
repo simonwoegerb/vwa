@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{setspace}
+\usepackage{tabularx}
 \usepackage{siunitx}
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
@@ -67,7 +68,6 @@ style=ieee
 \subfile{abstract}
 \pagebreak
 \subfile{vorwort}
-
 \pagebreak
 \pagenumbering{arabic}
 \singlespacing
@@ -81,6 +81,7 @@ style=ieee
 \subfile{chapters/lmd}
 \subfile{chapters/kapazitaeten}
 \subfile{chapters/anwendungen}
+\subfile{chapters/fazit}
 \pagebreak
 \singlespacing
 \printbibliography[nottype=online, heading=bibintoc]
@@ -89,6 +90,8 @@ style=ieee
 \printbibliography[heading=bibintoc, title={Web-Quellen}, type=online]
 \pagebreak
 \listoffigures
+\pagebreak
+\listoftables
 \pagebreak
 \printnoidxglossary[sort=use, type=\acronymtype]
 \printnoidxglossary[sort=use]
