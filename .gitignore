@@ -1,4 +1,5 @@
 *.glo
+*.lot
 *.ist
 *.aux
 *(busy)
