@@ -1,4 +1,5 @@
 *.glo
+!chapters/*.pdf
 *.lot
 *.ist
 *.aux

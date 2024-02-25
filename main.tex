@@ -1,4 +1,5 @@
 \documentclass[12pt]{article}
+\usepackage{pdfpages}
 \usepackage{setspace}
 \usepackage{tabularx}
 \usepackage{siunitx}
@@ -95,4 +96,8 @@ style=ieee
 \pagebreak
 \printnoidxglossary[sort=use, type=\acronymtype]
 \printnoidxglossary[sort=use]
+\pagebreak
+\addcontentsline{toc}{section}{Anhang}
+\includepdf{chapters/selbststaendigkeitserklaerung.pdf}
+%\includepdf{chapters/betreuungsprotkoll.pdf}
 \end{document}
