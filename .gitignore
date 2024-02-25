@@ -1,5 +1,5 @@
 *.glo
-!chapters/*.pdf
+!chapters/selbststaendigkeitserklaerung.pdf
 *.lot
 *.ist
 *.aux
