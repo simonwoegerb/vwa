@@ -13,6 +13,7 @@
 \usepackage{float}
 \usepackage[version=4]{mhchem}
 \usepackage{blindtext}
+
 \graphicspath{{./img/}}
 \hfuzz=5.0002pt
 \voffset = 1cm
@@ -60,6 +61,10 @@ style=ieee
   presentedat = präsentiert auf\addspace,
 }
 \addto{\captionsgerman}{\renewcommand{\abstractname}{Abstract}}
+\renewcommand\cftloftitlefont{\mdseries\Large} % optional
+\renewcommand\cftfigindent{0pt}  % no indentation
+\renewcommand\cftfigpresnum{(}   % prefix "(" before figure number
+\renewcommand\cftfigaftersnum{)} % affix ")" after figure number
 \begin{document}
 \onehalfspacing
 \pagenumbering{gobble}
@@ -70,10 +75,10 @@ style=ieee
 \pagebreak
 \subfile{vorwort}
 \pagebreak
-\pagenumbering{arabic}
 \singlespacing
 \tableofcontents
 \onehalfspacing
+\pagenumbering{arabic}
 \pagebreak
 \subfile{einleitung}
 \pagebreak
