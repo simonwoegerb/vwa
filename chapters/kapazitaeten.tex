@@ -2,7 +2,7 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \section{Kapazitäten und Grenzen der Maschinen}
-\subsection{Verwendbare Materialien}
+\subsection{Geeignete Materialien}
 Im Rahmen des \acrlong{slm} sind viele Materialien verarbeitbar, darunter Werkzeugstähle, Edelstähle, Titanium-Legierungen und Nickel-Legierungen. Jedes dieser Materialen findet andere Anwendungen, einige von welchen in Unterpunkt \ref{sec:anwendungen} genauer erläutert werden.\\ Tabelle \ref{table:materials} zeigt eine Übersicht der wichtigsten Materialien und deren Anwendungen. Die meisten dieser Materialien sind sowohl im \acrshort{slm} als auch im \acrshort{lmd}-Verfahren verwendbar, wenn auch teilweise in anderen Formen, wie Draht und Pulver.
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{{>{\hsize=.6\hsize\linewidth=\hsize}X
@@ -34,13 +34,13 @@ Recycling des Restmaterials ist nur bei \acrshort{slm} von Bedeutung, da bei \ac
 \subsection{Auswirkungen von Orientierung und Platzierung}
 Im Selective-Laser-Melting-Verfahren ist die richtige Orientierung im Slicer essentiell, um stabile Teile zu erhalten.
 Ein Winkel von \qty{45}{\degree} führt zu einem Teil, welcher in alle Richtungen die universell größtmögliche Stärke aufweist. Dies wird in Abb. \ref{img:ss_1} für einen Teil welcher dem Stressprofil von Abb. \ref{img:fh_1} folgt dargestellt. 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\textwidth]{ss_Flachstab}
 	\ccaption{Modell mit generierten Supports in Magics Materialise 25.02}{eigener Screenshot}
 	\label{img:ss_1}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\textwidth]{fh_Flachstab}
 	\ccaption{Simuliertes Lastenprofil für ein Teil mit bestimmten Verschraubungen und gleichmäßiger Last}{Screenshot Studentenaufgabe FH Wels: Ing. Walter Kaindl}
@@ -49,7 +49,7 @@ Ein Winkel von \qty{45}{\degree} führt zu einem Teil, welcher in alle Richtunge
 
 Wenn ein anderes Stressprofil bekannt ist, kann mithilfe der Orientierung auch auf dieses eingegangen werden. Allgemein sollte immer entgegen der Schichten gleichmäßig Last ausgeübt werden, da die Schicht-zu-Schicht-Verbindung der schwächste Punkt ist und beidseitige/biegende Last normal zu den Schichten wie in Abb. \ref{img:orient_1} erkennbar ist.
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{orientation}
 	\ccaption{Optimale Orientierung nach Lastenprofil}{https://www.protolabs.com/media/if4besvl/picture1.jpg}
@@ -57,13 +57,13 @@ Wenn ein anderes Stressprofil bekannt ist, kann mithilfe der Orientierung auch a
 \end{figure}
 Zusätzlich ist die Orientierung auch bei der Platzierung der Supportstrukturen am Bauteil wichtig, da durch strategisches Rotieren des Teils die Supports minimiert werden können (Überhänge welche nicht unterstützt werden müssen o.Ä.) und somit auch Material und \it{Post-Processing}-Arbeit eingespart werden können. 
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\textwidth]{unsupported}
 	\ccaption{Geschwindigkeitsoptimierter Druck}{Eigener Screenshot PrusaSlicer 2.6.0}
 	\label{img:unsupp_1}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\textwidth]{supported}
 	\ccaption{Massenproduktions-optimierter Druck}{Eigener Screenshot PrusaSlicer 2.6.0}
@@ -79,7 +79,7 @@ Bei \acrfull{lmd} kommt hierzu noch der Fakt, dass die die Maschine zumeist nich
 
 	\label{img:round_orient}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\textwidth]{t_pipe}
 	\ccaption{T-Rohr als LMD-druckbarer Teil}{Eigener Screenshot PrusaSlicer 2.6.0}

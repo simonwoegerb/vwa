@@ -12,28 +12,28 @@ Das wohl bekannteste Verfahren ist \acrfull{fdm}, welches im Gegensatz zu SLA mi
 Dieses Filament besteht aus thermoplastischen Polymeren. Je nach Anwendung der Drucke werden hierbei verschiedene Materialien verwendet, wie PLA (\it{Polylactic Acid}), welches sehr oft für Prototypen verwendet wird, da es leicht und schnell druckbar ist, oder PETG (\it{Polyethylene terephthalate glycol}) für stabilere Drucke. 
 Jeder dieser Drucke könnte theoretisch wieder aufgeschmolzen werden und neu verarbeitet werden, wobei solche Verfahren bisher noch zu experimentell sind für Industrie-Anwendungen. \parencite{OLADAPO2023165046}  
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{ender3}
+  \includegraphics[width=.78\linewidth]{ender3}
   \ccaption{Ender 3 FDM-Drucker}{\url{https://3dee.at/wp-content/uploads/2022/09/creality-ender-3-tiny.png}}
   \label{img:fdm}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{sla_printer}
-  \ccaption{SLA-Drucker Aufbau}{\url{https://3dee.at/wp-content/uploads/2022/09/creality-ender-3-tiny.png}}
+  \includegraphics[width=\linewidth]{sla_1}
+  \ccaption{SLA-Drucker Aufbau}{\url{https://www.3dnatives.com/en/wp-content/uploads/sites/2/SLA_Technology-1280x720.jpg}}
   \label{img:sla}
 \end{minipage}
 \end{figure}
 
-Das erste Pulverbett-Metall-3D-Druck-Verfahren, \acrfull{slm}, wurde kurz darauf im Jahr 1995 in Deutschland entwickelt und patentiert. Es wird unter vielen Namen vertrieben, wie \it{Direct Metal Laser Sintering} oder unter dem Überbegriff \it{Powder-Bed-Fusion}. Offiziell wurde das Verfahren als Sinter-Verfahren eingestuft durch das IEEE (\it{Institute of Electrical and Electronics Engineers}), was jedoch eine wissenschaftlich gesehen falsche Kategorisierung ist, da ein Sinter-Verfahren das Grundmaterial nur \say{erweicht} und nicht vollständig aufschmilzt, wie es im SLM-Prozess geschieht. \parencite{SINTER_SMELT} Übliche Materialien für den SLM-Druck sind Aluminium-, Stahl- und Titan-Legierungen. Oft verwendet wird der Edelstahl 316L mit einem Schmelzpunkt von \qty{1390}{\celsius} und \qty{1440}{\degreeCelsius} \parencite{610LSTEEL} oder der Werkzeugstahl 1.2709 für Spritzguss-Formen. \parencite{steel12709} Diese Temperatur ist nur bewerkstelligbar durch einen starken Laser mit einer Leistung von \qty{400}{\watt} bei den meisten industriellen Maschinen bis hin zu über \qty{12}{\kilo\watt}.
+Das erste Pulverbett-Metall-3D-Druck-Verfahren, \acrfull{slm}, wurde kurz darauf im Jahr 1995 in Deutschland entwickelt und patentiert. Es wird unter vielen Namen vertrieben, wie \it{Direct Metal Laser Sintering} oder unter dem Überbegriff \acrlong{pbf}. Offiziell wurde das Verfahren als Sinter-Verfahren eingestuft durch das IEEE (\it{Institute of Electrical and Electronics Engineers}), was jedoch eine wissenschaftlich gesehen falsche Kategorisierung ist, da ein Sinter-Verfahren das Grundmaterial nur \say{erweicht} und nicht vollständig aufschmilzt, wie es im SLM-Prozess geschieht. \parencite{SINTER_SMELT} Übliche Materialien für den SLM-Druck sind Aluminium-, Stahl- und Titan-Legierungen. Oft verwendet wird der Edelstahl 316L mit einem Schmelzpunkt von \qty{1390}{\celsius} und \qty{1440}{\degreeCelsius} \parencite{610LSTEEL} oder der Werkzeugstahl 1.2709 für Spritzguss-Formen. \parencite{steel12709} Diese Temperatur ist nur bewerkstelligbar durch einen starken Laser mit einer Leistung von \qty{400}{\watt} bei den meisten industriellen Maschinen bis hin zu über \qty{12}{\kilo\watt} auf experimentellen Maschinen.
 \subsection{Digitalisierung und Darstellung}
-Die Grundlage eines jeden 3D-gedruckten Modells ist ein \acrfull{cad}, welches das gewünschte Teil durch 2D-Zeichnungen darstellt, welche danach zu Körpern extrudiert werden mit verschiedenen Tools. Diese Modelle werden  in \it{Standard-Tesselation-Language} (STL) konvertiert. Ein solches \it{Mesh} ist in Abbildung \ref{img:stl_1} erkennbar anhand einer Kugel. Dieses Format ist für den \it{Slicer}, ein Programm, welches das Modell für den Drucker konvertiert gedacht. Ein Slicer (engl. \it{to slice}: schneiden), \say{schneidet} das Modell in Schichten, welche der Drucker dann auftragen kann. Zusätlich kontrolliert er zumeist die Einstellungen mit welchen der Drucker arbeitet (z.B. Temperatur, Schichtdicke, Geschwindigkeit, o.Ä.). Eine STL-Datei stellt das Modell als eine Punktwolke dar, wobei immer 3 Punkte ein Dreieck, auch bekannt als \it{Facet} oder \it{Face}, bilden. Ein weiterer Aspekt, welcher von STL-Dateien gespeichert wird ist der Normalvektor eines jeden Dreiecks, mit welchem der Slicer berechnen kann, ob es eine \say{innere} oder \say{äußere} Wand ist, um eine etwaige Füllung des Teils mit \it{Lattice}-Strukturen, also einem unterstützenden Gerüst, zu ermöglichen, ohne das äußere Erscheinungsbild zu beeinträchtigen. Dies ist insofern relevant, da schlecht exportierte STL-Dateien oft fehlerhafte Normalvektoren enthalten und somit beinahe undruckbar sind ohne manuelle Reparatur durch Rückführung in die originale Topologie, welche rechnerisch sehr aufwendig ist und nicht ohne Detailverluste möglich ist.
+Die Grundlage eines jeden 3D-gedruckten Modells ist ein \acrfull{cad}, welches das gewünschte Teil durch 2D-Zeichnungen darstellt, welche danach zu Körpern extrudiert werden mit verschiedenen Tools. Diese Modelle werden  in \it{Standard-Tesselation-Language} (STL) konvertiert. Ein solches \it{Mesh} ist in Abbildung \ref{img:stl_1} erkennbar anhand einer Kugel. Dieses Format ist für den \it{Slicer}, ein Programm, welches das Modell für den Drucker konvertiert gedacht. Ein Slicer (engl. \it{to slice}: schneiden), \say{schneidet} das Modell in Schichten, welche der Drucker dann auftragen kann. Zusätlich kontrolliert er zumeist die Einstellungen mit welchen der Drucker arbeitet (z.B. Temperatur, Schichtdicke, Geschwindigkeit, o.Ä.). Eine STL-Datei stellt das Modell als eine Punktwolke dar, wobei immer 3 Punkte ein Dreieck, auch bekannt als \it{Facet} oder \it{Face}, bilden. Ein weiterer Aspekt, welcher von STL-Dateien gespeichert wird ist der Normalvektor eines jeden Dreiecks, mit welchem der Slicer berechnen kann, ob es eine \say{innere} oder \say{äußere} Wand ist, um eine etwaige Füllung des Teils mit \it{Lattice}-Strukturen, also einem unterstützenden Gerüst, zu ermöglichen, ohne das äußere Erscheinungsbild zu beeinträchtigen. Dies ist insofern relevant, da schlecht exportierte STL-Dateien oft fehlerhafte Normalvektoren enthalten und somit beinahe undruckbar sind ohne manuelle Reparatur durch Rückführung in die originale Topologie, welche rechnerisch sehr aufwendig ist und nicht ohne Detailverluste möglich ist. Zudem ist eine solche rückgeführte Oberfläche oft sehr unpraktisch zu bearbeiten, da eben viele Informationen, die von \acrshort{cad}-Programmen gespeichtert und benötigt werden nicht mehr vorhanden sind.
 \begin{figure}[h]
 \begin{center}
-	\includegraphics[width=.7\textwidth]{stl_file_1}
+	\includegraphics[width=.6\textwidth]{stl_file_1}
 	\ccaption{Wireframe eines Würfels und einer Kugel im STL-Datenformat}{\url{https://www.protolabs.com/media/1022944/pl-dt-may-2021_570x308-02.png}}
 	\label{img:stl_1}
 \end{center}
@@ -42,4 +42,4 @@ Das STL-Format ist sehr effizient darin, ebene Oberflächen darzustellen, da die
 
 Als Alternative zum STL-Format steht das STEP-Format, welches Krümmungen mit sogenannten \it{Non-Uniform Rational B-Splines (NURBS)} darstellt.
 Diese ermöglichen es, beliebige Kurven und Formen darzustellen. Das Format wird immer beliebter, wobei es noch weit vom Nutzungsgrad der STL-Dateien entfernt ist, da es rechnerisch intensiver ist und von vielen populären Programmen nicht unterstützt wird die im Hobby- \& Industriebereich verwendet werden. Die Präzision dieses Formats ist oft hoch gelobt, jedoch in der Praxis aufgrund von schlecht kalibrierten Maschinen sowie auch technischen Limitationen in den meisten Fällen nicht relevant. \parencite{ADOBESTEP}
-\end{document}
+\end{document6}

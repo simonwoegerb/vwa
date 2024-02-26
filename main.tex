@@ -61,10 +61,11 @@ style=ieee
   presentedat = präsentiert auf\addspace,
 }
 \addto{\captionsgerman}{\renewcommand{\abstractname}{Abstract}}
-\renewcommand\cftloftitlefont{\mdseries\Large} % optional
-\renewcommand\cftfigindent{0pt}  % no indentation
-\renewcommand\cftfigpresnum{(}   % prefix "(" before figure number
-\renewcommand\cftfigaftersnum{)} % affix ")" after figure number
+%\renewcommand\cftloftitlefont{\mdseries\Large} % optional
+%\renewcommand\cftfigindent{0pt}  % no indentation
+%\renewcommand\cftfigpresnum{(}   % prefix "(" before figure number
+%\renewcommand\cftfigaftersnum{)} % affix ")" after figure number
+\renewcommand{\thefigure}{(\arabic{figure})}
 \begin{document}
 \onehalfspacing
 \pagenumbering{gobble}
@@ -78,8 +79,8 @@ style=ieee
 \singlespacing
 \tableofcontents
 \onehalfspacing
-\pagenumbering{arabic}
 \pagebreak
+\pagenumbering{arabic}
 \subfile{einleitung}
 \pagebreak
 \subfile{chapters/einfuehrung}
