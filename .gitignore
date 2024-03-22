@@ -1,4 +1,6 @@
 *.glo
+*.nav
+*.snm
 *.lot
 *.ist
 *.aux
