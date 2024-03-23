@@ -2,13 +2,13 @@
 \documentclass{beamer}
 \usepackage{copyrightbox}
 \usepackage{graphicx}
+\usepackage{xurl}
 \graphicspath{{../img/}}
 \setbeamertemplate{navigation symbols}{}
 \usetheme{CambridgeUS}
 \usecolortheme{seahorse}
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
-%Information to be included in the title page:
 \title[VWA-Präsentation]{Selective-Laser-Melting und Laser-Metal-Deposition im Vergleich}
 \subtitle{Präsentation der Vorwissenschaftlichen Arbeit}
 \author{Simon Wögerbauer}
@@ -22,11 +22,18 @@
 \tiny
 }
 \makeatother
+\makeatletter
+\renewcommand{\CRB@setcopyrightparagraphstyle}{%
+% Return to justifying text
+\setlength{\rightskip}{0pt}
+\setlength{\leftskip}{0pt}
+}
+\makeatother
 \begin{document}
 \frame{\titlepage}
 % FOLIE 1
 \begin{frame}
-	\frametitle{\textit{Selective Laser Melting}-Verfahren}
+	\frametitle{\textit{Selective Laser Melting (SLM)}-Verfahren}
 
 \begin{figure}
 	\begin{centering}
@@ -41,10 +48,21 @@
 \begin{figure}
 	\begin{centering}
 	\copyrightbox[b]{
-	\includegraphics[width=.7\textwidth]{aero_2.png}
+	\includegraphics[width=.9\textwidth]{aero_2}
 }{\url{https://www.researchgate.net/profile/Paul-Gradl/publication/360032150/figure/fig4/AS:1146451094708236@1650346649497/Examples-of-complex-aerospace-parts-fabricated-with-different-metals-and-alloys-a.png}}
 	\end{centering}
 \end{figure}
+\end{frame}
+\begin{frame}
+\begin{figure}
+	\begin{centering}
+	\copyrightbox[b]{
+	\includegraphics[width=.9\textheight]{aero_1}
+}{\url{https://www.eplus3d.com/uploads/image/20220517/eplus3d-provides-large-metal-am-machines-to-jingye-additive-manufacturing-for-aerospace-1.jpg}}
+	\end{centering}
+\end{figure}
+
+	
 \end{frame}
 
 \end{document}
