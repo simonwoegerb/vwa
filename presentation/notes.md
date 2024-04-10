@@ -8,7 +8,7 @@ Sehr geehrtes Prüfungskomitee!
 
 **C**enter of **S**mart **M**anufacturing,
 Moderne Fertigungstechnik z.B. Substraktive Fertigung,
-3D-Druck -> Praktikum Sommer '23, Fachbereich Fertigungstechnik &
+3D-Druck -> Praktikum Sommer 2023, Fachbereich Fertigungstechnik &
 Werkstoffwissenschaften -> Metall-3D-Druck,
 SLM Maschine selbst bedienen, reinigen, "von Idee zu Produkt" ->
 Modellieren am PC, "vorbereiten/druckbar machen durch Unterstützungsstrukturen",
@@ -33,7 +33,8 @@ Lila: Laser+Scanner, Rot: Auffang-Reservoir
 Anwendungen: Medizin (Implantate),
 Forschung (schnelle Prod. v. Prototypen),
 Leichtbauindustrie, Automobil-Industrie, Luftfahrt/Raumfahrt,
-Stützstrukturen (b), Triebwerke (a,c,e,f), Radiator (d) für Kühlungen
+
+Stützstrukturen (b), Triebwerke (a,c,e,f),  (d) Kühlungskomponenten
 
 ## Folie 6
 
