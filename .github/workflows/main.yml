@@ -18,10 +18,13 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: presentation/main.tex
+      - name: Rename file 
+        run: mv presentation/main.pdf presentation.pdf
+
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
           name: VWA
-          path: 
-            - main.pdf
-            - presentation/main.pdf
+          path: |
+            main.pdf
+            presentation.pdf
