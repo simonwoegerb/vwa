@@ -1,11 +1,10 @@
 # VWA-Notizen
 
-## Folie 1 
+## Folie 1
 
-Sehr geehrtes Prüfungskomitee!
+Sehr geehrtes Prüfungskomitee, (liebe Mitschülerinnen und Mitschüler)!
 
 ## Folie 2
-
 **C**enter of **S**mart **M**anufacturing,
 Moderne Fertigungstechnik z.B. Substraktive Fertigung,
 3D-Druck -> Praktikum Sommer 2023, Fachbereich Fertigungstechnik &
@@ -16,9 +15,10 @@ Drucker bedienen selbst
 
 ## Folie 3
 
-SLM: Laser scannt Muster einer Schicht, Plattformkolben wird abgesenkt um
-Schichtdicke ($\le50\mu m$), Pulver-Kolben um mehr als Schichtdicke angehoben,
-Wiederbeschichtungswerkzeug zieht neue flache Schicht auf,
+SLM: Plattformkolben wird abgesenkt um
+Schichtdicke (<50 micrometer), Pulver-Kolben um mehr als Schichtdicke angehoben,
+Wiederbeschichtungswerkzeug zieht neue flache Schicht auf, Laser zieht Schicht
+nach, Wiederholen
 Rest in Auffang-Reservoir -> Recycling durch Filtern -> etwa 1% Verlustrate
 bei Pulver -> sehr effizient vgl. zu substraktiver Fertigung
 
